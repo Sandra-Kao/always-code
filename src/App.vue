@@ -1,40 +1,54 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <Header></Header>
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
+  <div>
+    <TheHeader></TheHeader>
+    <BannerBlock></BannerBlock>
+    <SpecialtyBlock></SpecialtyBlock>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
-import Header from './components/layout/Header.vue';
+import TheHeader from "./components/layout/TheHeader.vue";
+import BannerBlock from "./components/BannerBlock.vue";
+import SpecialtyBlock from "./components/SpecialtyBlock.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld,
-    Header,
+    TheHeader,
+    BannerBlock,
+    SpecialtyBlock,
   },
 };
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
+  font-family: "Segoe UI VSS (Regular)", "Segoe UI", "-apple-system",
+    BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Ubuntu, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  /* color: #2c3e50;
+  margin-top: 60px; */
 }
 :root {
   --color-white: #fff;
+  --color-dark: #3b3b3b;
   --color-gray-darkest: #323233;
   --color-gray-darker: #606266;
   --color-gray-lightest: #f5f4f4;
-  --color-blue-lightest: #f7fbff;
+  /* --color-blue-lightest: #f7fbff;
   --color-link-blue: #409eff;
   --color-link-blue-lighter: #66b1ff;
-  --color-link-blue-darker: #3a8ee6;
+  --color-link-blue-darker: #3a8ee6; */
+
+  --color-primary-light: #8fffda;
+  --color-primary-base: #67e0b8;
+  --color-primary-darker: #359474;
+  --color-primary-base-15: rgba(103, 224, 184, 0.15);
 }
 
 * {
@@ -50,6 +64,7 @@ export default {
 
 html {
   /* font-size: 26px; */
+  color: var(--color-dark);
 }
 
 h1:first-child,
@@ -62,18 +77,20 @@ h6:first-child {
 }
 
 h1 {
-  max-width: 360px;
   font-size: 52px;
+  margin-bottom: 24px;
 }
 
 h2 {
   font-size: 22px;
+  margin-bottom: 12px;
   line-height: 26px;
   font-weight: 600;
 }
 
 h3 {
   font-size: 18px;
+  margin-bottom: 8px;
   line-height: 26px;
   font-weight: 600;
 }
@@ -86,14 +103,33 @@ ul,
 li,
 a,
 button {
-  color: #222222;
   font-size: 16px;
+  margin-bottom: 6px;
 }
 
 h4,
 ul {
-  color: #222222;
   text-transform: uppercase;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+.container {
+  padding: 50px 50px;
+  margin-bottom: 50px;
+}
+.row-maxwidth-1200{
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.paragraph-h1{
   font-size: 16px;
+  margin-bottom: 6px;
+}
+.full-width{
+  width:100%;
 }
 </style>
