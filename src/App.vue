@@ -4,6 +4,7 @@
     <TheHeader></TheHeader>
     <BannerBlock></BannerBlock>
     <SpecialtyBlock></SpecialtyBlock>
+    <MyWorkBlock></MyWorkBlock>
   </div>
 </template>
 
@@ -11,6 +12,7 @@
 import TheHeader from "./components/layout/TheHeader.vue";
 import BannerBlock from "./components/BannerBlock.vue";
 import SpecialtyBlock from "./components/SpecialtyBlock.vue";
+import MyWorkBlock from "./components/MyWorkBlock.vue";
 
 export default {
   name: "App",
@@ -18,6 +20,7 @@ export default {
     TheHeader,
     BannerBlock,
     SpecialtyBlock,
+    MyWorkBlock
   },
 };
 </script>
@@ -104,7 +107,7 @@ li,
 a,
 button {
   font-size: 16px;
-  margin-bottom: 6px;
+  margin-bottom: 16px;
 }
 
 h4,
@@ -124,10 +127,6 @@ img {
   width: 95%;
   max-width: 1200px;
   margin: 0 auto;
-}
-.paragraph-h1{
-  font-size: 16px;
-  margin-bottom: 6px;
 }
 .full-width{
   width:100%;
