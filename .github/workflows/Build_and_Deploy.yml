@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2.2
+      - uses: actions/checkout@25a956c84d5dd820d28caab9f86b8d183aeeff3d
 
       
       - name: Install & Build #Init project
