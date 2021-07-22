@@ -1,5 +1,3 @@
-import Image from './assets/website-blog-post-vuejs.png';
-
 <template>
   <section class="my-work">
     <h2>My work</h2>
@@ -11,25 +9,9 @@ import Image from './assets/website-blog-post-vuejs.png';
       <h3>{{ type.project }}</h3>
       <div class="my-work__wrapper">
         <div class="my-work__card" v-for="work in type.works" :key="work.name">
+          <h4>{{ work.name }}</h4>
           <a :href="work.link">
-            <h4>{{ work.name }}</h4>
-
-            <img :src="'./assets/'+work.imgFileName" :alt="work.imgFileName" />
-            <!-- <img src="./assets/website-blog-post-vuejs.png" :alt="work.imgFileName" /> -->
-
-
-
-
-
-
-
-            <!-- <img :src="require(`${getFilePath(work.imgFileName)}`)" :alt="work.imgFileName" /> -->
-
-            <!-- <img :src="require('./assets/website-blog-post-vuejs.png')" :alt="work.imgFileName" /> -->
-
-            <!-- <img :src="`./assets/`+work.imgFileName" :alt="work.imgFileName" /> -->
-            <!-- <img :src="getFilePath(work.imgFileName)" :alt="work.imgFileName" /> -->
-
+            <img :src="getImgUrl(work.imgFileName)" :alt="work.imgFileName" />
             <p>{{ work.description }}</p>
           </a>
         </div>
@@ -42,6 +24,10 @@ import Image from './assets/website-blog-post-vuejs.png';
 export default {
   name: "MyWorkBlock",
   methods: {
+    getImgUrl(pet) {
+      const images = require.context("./assets/", false, /\.png$/);
+      return images("./" + pet + ".png");
+    },
     getFilePath(fileName) {
       return "./assets/" + fileName;
     },
@@ -54,27 +40,27 @@ export default {
           project: "Side projects on my own",
           works: [
             {
-              name: "",
+              name: "My Coding Blog",
               link: "https://alwayscode.live/views/Index.html",
-              imgFileName: "website-blog-post-vuejs.png",
+              imgFileName: "website-blog-post-vuejs",
               imgAlt: "",
               responsible: "I was responsible for",
               description:
                 "I was responsible for. I introduced and implemented training programs to the company.",
             },
             {
-              name: "",
-              link: "https://alwayscode.live/views/Index.html",
-              imgFileName: "website-blog-post-vuejs.png",
+              name: "About Me - A Front-End Web Developer",
+              link: "/",
+              imgFileName: "website-blog-post-vuejs",
               imgAlt: "",
               responsible: "I was responsible for",
               description:
                 "I was responsible for. I introduced and implemented training programs to the company.",
             },
             {
-              name: "",
-              link: "https://alwayscode.live/views/Index.html",
-              imgFileName: "website-blog-post-vuejs.png",
+              name: "Monster Slayer",
+              link: "https://codepen.io/K-SY/full/QWGzGeY",
+              imgFileName: "codepen-vuejs-monster-slayering",
               imgAlt: "",
               responsible: "I was responsible for",
               description:
@@ -83,30 +69,30 @@ export default {
           ],
         },
         {
-          project: "With Company",
+          project: "Work With Company",
           works: [
             {
-              name: "",
-              link: "https://alwayscode.live/views/Index.html",
-              imgFileName: "website-blog-post-vuejs.png",
+              name: "IoT Academy",
+              link: "https://academy.advantech.com/en-us/courses",
+              imgFileName: "website-academy",
               imgAlt: "",
               responsible: "I was responsible for",
               description:
                 "I was responsible for. I introduced and implemented training programs to the company.",
             },
             {
-              name: "",
-              link: "https://alwayscode.live/views/Index.html",
-              imgFileName: "website-blog-post-vuejs.png",
+              name: "Advantech CSR Portal",
+              link: "https://csr.advantech.com/en-us",
+              imgFileName: "website-corporate-social-responsibility-en",
               imgAlt: "",
               responsible: "I was responsible for",
               description:
                 "I was responsible for. I introduced and implemented training programs to the company.",
             },
             {
-              name: "",
-              link: "https://alwayscode.live/views/Index.html",
-              imgFileName: "ts/website-blog-post-vuejs.png",
+              name: "Advantech Marketplace",
+              link: "https://wise-paas.advantech.com/en-us/marketplace/product/advantech.webaccess-cnc",
+              imgFileName: "website-marketplace-productpage",
               imgAlt: "",
               responsible: "I was responsible for",
               description:
@@ -122,4 +108,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.my-work__wrapper {
+  display: flex;
+}
+.my-work__card img {
+  width: 100px;
+  height: 100px;
+}
 </style>
