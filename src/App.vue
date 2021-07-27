@@ -85,7 +85,7 @@ h1 {
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 32px;
   margin-bottom: 12px;
   line-height: 26px;
   font-weight: 600;
@@ -107,12 +107,13 @@ li,
 a,
 button {
   font-size: 16px;
+  font-weight: 400;
   margin-bottom: 16px;
 }
 
 h4,
 ul {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 img {
