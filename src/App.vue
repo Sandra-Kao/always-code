@@ -5,22 +5,28 @@
     <BannerBlock></BannerBlock>
     <SpecialtyBlock></SpecialtyBlock>
     <MyWorkBlock></MyWorkBlock>
+    <AnkletAction></AnkletAction>
+    <TheFooter></TheFooter>
   </div>
 </template>
 
 <script>
 import TheHeader from "./components/layout/TheHeader.vue";
+import TheFooter from "./components/layout/TheFooter.vue";
 import BannerBlock from "./components/BannerBlock.vue";
 import SpecialtyBlock from "./components/SpecialtyBlock.vue";
 import MyWorkBlock from "./components/MyWorkBlock.vue";
+import AnkletAction from "./components/AnkletAction.vue";
 
 export default {
   name: "App",
   components: {
     TheHeader,
+    TheFooter,
     BannerBlock,
     SpecialtyBlock,
-    MyWorkBlock
+    MyWorkBlock,
+    AnkletAction,
   },
 };
 </script>
@@ -51,6 +57,7 @@ export default {
   --color-primary-light: #8fffda;
   --color-primary-base: #67e0b8;
   --color-primary-darker: #359474;
+  --color-primary-darkest: #033333;
   --color-primary-base-15: rgba(103, 224, 184, 0.15);
 }
 
@@ -124,12 +131,18 @@ img {
   padding: 50px 50px;
   margin-bottom: 50px;
 }
-.row-maxwidth-1200{
+.row-maxwidth-1200 {
   width: 95%;
   max-width: 1200px;
   margin: 0 auto;
 }
-.full-width{
-  width:100%;
+.full-width {
+  width: 100%;
+}
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>

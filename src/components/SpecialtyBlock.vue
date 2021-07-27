@@ -58,7 +58,7 @@ export default {
             "Cacoo",
             "Font Awesome",
             "FileZilla",
-            "Hostinger International"
+            "Hostinger International",
           ],
         },
         {
@@ -66,7 +66,16 @@ export default {
           bigHeading: "Front-end Developer",
           paragraph: "Punch the keyboard makes time flies and kill the pian.",
           headingSkill: "Languages I Code:",
-          skills: ["JavaScript", "Vue.js", "HTML", "CSS", "SASS", "Markdown", "DevOps", "Azure CI/CD"],
+          skills: [
+            "JavaScript",
+            "Vue.js",
+            "HTML",
+            "CSS",
+            "SASS",
+            "Markdown",
+            "DevOps",
+            "Azure CI/CD",
+          ],
           headingTool: "Dev Tools:",
           tools: [
             "Visual Studio",
@@ -98,6 +107,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .specialty-block {
+  padding-bottom: 50px;
+
+  border-bottom: 2px solid var(--color-primary-base-15);
 }
 .container {
   background: var(--color-primary-light);
@@ -140,11 +152,20 @@ svg[class*="fa-"] {
   font-size: 66px;
 }
 .specialty-wrapper .specialty-wrapper__card:nth-child(2) svg[class*="fa-"] {
-  color:var(--color-primary-base);
+  color: var(--color-primary-base);
 }
-
 
 .specialty-wrapper-skills:not(:last-child):after {
   content: ", ";
+}
+
+@media screen and (max-width: 768px) {
+  .specialty-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .specialty-wrapper__card {
+    width: 80%;
+  }
 }
 </style>
