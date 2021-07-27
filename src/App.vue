@@ -132,7 +132,6 @@ img {
   margin-bottom: 50px;
 }
 .row-maxwidth-1200 {
-  width: 95%;
   max-width: 1200px;
   margin: 0 auto;
 }
