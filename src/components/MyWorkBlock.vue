@@ -59,8 +59,7 @@ export default {
               imgFileName: "640-website-blog-post-vuejs",
               imgAlt: "",
               responsible: "I was responsible for",
-              description:
-                "I introduced and implemented training programs to the company.",
+              description:"A fun front-end develop blog, hosted on my domain and build for sharing and notes the interesting founds during coding time."
             },
             {
               name: "About Me",
@@ -69,7 +68,7 @@ export default {
               imgFileName: "640-who-am-i",
               imgAlt: "",
               responsible: "I was responsible for",
-              description: "and implemented training programs to the company.",
+              description: "A NPM + Vue.js single-page application (SPA). Programing with great RWD, amazing UX /UI and auto verification GitHub page deployment.",
             },
             {
               name: "Monster Slayer",
@@ -79,7 +78,7 @@ export default {
               imgAlt: "",
               responsible: "I was responsible for",
               description:
-                "I introduced and implemented training programs implemented training programs to the company.",
+                "Build this game to have fun and show schoolmate how a front-end program works after I graduated from my mother school. It was a great honor for me to invited and make a presentation at lecture hall.",
             },
           ],
         },
@@ -94,7 +93,7 @@ export default {
               imgAlt: "",
               responsible: "I was responsible for",
               description:
-                "I was responsible for. I introduced and implemented training programs to the company.",
+                "I own and develop Academy, a brand new front-end develop project with my team members, and I implement End-2-End test for Academy.",
             },
             {
               name: "Advantech CSR Portal",
@@ -104,7 +103,7 @@ export default {
               imgAlt: "",
               responsible: "I was responsible for",
               description:
-                "I was responsible for. I introduced and implemented training programs to the company.",
+                "It's a height-attention-driven project. I build CSR with .Net Core and Vanilla JavaScript in a short-limited time, and auto deployed on Web App in Azure CI/CD to enhance system stability.",
             },
             {
               name: "Advantech Marketplace",
@@ -114,7 +113,7 @@ export default {
               imgAlt: "",
               responsible: "I was responsible for",
               description:
-                "I was responsible for. I introduced and implemented training programs to the company.",
+                "This is a ASP.Net MVC Project. I was responsible for front-end data binding, page SEO, user experience and Azure CI/CD.",
             },
           ],
         },
