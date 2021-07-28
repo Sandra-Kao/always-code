@@ -2,7 +2,7 @@
   <section class="banner-block">
     <div class="container">
       <h1>Front-end Developer</h1>
-      <h3>I code beautifully simple things and I love what I do.</h3>
+      <h3>I love to write elegant and alive programs. My code has to be efficiency, clean and understandable.</h3>
       <article class="banner-block__person-wrapper">
         <img
           src="./assets/head-emoji.png"

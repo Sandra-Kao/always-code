@@ -49,7 +49,7 @@ export default {
           paragraph:
             "Scratch from nature to live. In the end, you will enjoyed my work.",
           headingSkill: "Makeing Beautiful Things With:",
-          skills: ["UX", "UI", "Web", "Mobile App"],
+          skills: ["UX", "UI", "Web", "HTML", "CSS", "SASS", "Mobile App"],
           headingTool: "Dev Tools:",
           tools: [
             "Figma",
@@ -66,16 +66,7 @@ export default {
           bigHeading: "Front-end Developer",
           paragraph: "Punch the keyboard makes time flies and kill the pian.",
           headingSkill: "Languages I Code:",
-          skills: [
-            "JavaScript",
-            "Vue.js",
-            "HTML",
-            "CSS",
-            "SASS",
-            "Markdown",
-            "DevOps",
-            "Azure CI/CD",
-          ],
+          skills: ["JavaScript", "Vue.js", "DevOps", "Azure CI/CD"],
           headingTool: "Dev Tools:",
           tools: [
             "Visual Studio",
@@ -85,18 +76,16 @@ export default {
             "GitFlow",
             "GitHub",
             "Codepen",
-            "DB Diagram",
-            "Swagger",
           ],
         },
         {
           icon: "fas fa-couch",
-          bigHeading: "Design",
-          paragraph: "Scratch to nature and finally you will enjoied my work.",
-          headingSkill: "Makeing Beautiful things with:",
-          skills: ["UX", "UI", "Web", "Mobile App"],
+          bigHeading: "Free time Sandra",
+          paragraph: "I enjoy bringing ideas from lige into the website.",
+          headingSkill: "Just be me. Keep learning:",
+          skills: ["Riding bike", "Board games"],
           headingTool: "Dev Tools:",
-          tools: ["Figma", "Zeplin", "Visual Studio Code", "Cacoo"],
+          tools: ["Medium", "Udemy", "Books", "Movies"],
         },
       ],
     };
@@ -123,6 +112,7 @@ export default {
 }
 .specialty-wrapper {
   display: flex;
+  padding: 0 25px;
   margin-top: -25%;
   border-radius: 30px;
 }
@@ -160,12 +150,30 @@ svg[class*="fa-"] {
 }
 
 @media screen and (max-width: 768px) {
+  p,
+  h3 ,span{
+    font-size: 19px;
+  }
   .specialty-wrapper {
     flex-wrap: wrap;
     justify-content: center;
   }
   .specialty-wrapper__card {
-    width: 80%;
+    width: 70%;
+  }
+  .specialty-wrapper__card:not(:last-child) {
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 500px) {
+  h2{
+    line-height: 1.3;
+  }
+  .specialty-block__introduction {
+    padding: 25px 0;
+  }
+  .specialty-wrapper {
+    padding: 0;
   }
 }
 </style>

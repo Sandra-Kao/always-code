@@ -32,6 +32,7 @@ header a {
   float: right;
   border: 1px solid var(--color-primary-darker);
   padding: 10px 20px;
+  margin: 0;
   text-decoration: none;
   color: var(--color-primary-darker);
 }
@@ -47,5 +48,10 @@ header a:active {
 }
 .is-rounded {
   border-radius: 290486px;
+}
+@media screen and (max-width: 500px) {
+  header{
+    margin: 0;
+  }
 }
 </style>

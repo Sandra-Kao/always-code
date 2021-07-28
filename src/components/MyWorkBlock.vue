@@ -1,9 +1,13 @@
 <template>
   <section class="my-work row-maxwidth-1200">
     <h2>My Work</h2>
-    <a href="mailto:shuyukao0@gmail.com" class="see-more"
-      >Want to see more? <i class="far fa-paper-plane"></i
-    ></a>
+    <p>
+      These are my recently projects, if you
+      <a href="mailto:shuyukao0@gmail.com" class="see-more">
+        Want To See More?
+        <i class="far fa-paper-plane"></i>
+      </a>
+    </p>
     <div
       class="my-work__blobk"
       v-for="type in workProjects"
@@ -12,7 +16,7 @@
       <p>{{ type.project }}</p>
       <article class="my-work__wrapper">
         <a
-          class="my-work__link"
+          class="my-work__card"
           :href="work.link"
           target="_blank"
           v-for="work in type.works"
@@ -27,7 +31,6 @@
           </header>
           <p>{{ work.description }}</p>
         </a>
-        <div class="my-work__card"></div>
       </article>
     </div>
   </section>
@@ -59,7 +62,8 @@ export default {
               imgFileName: "640-website-blog-post-vuejs",
               imgAlt: "",
               responsible: "I was responsible for",
-              description:"A fun front-end develop blog, hosted on my domain and build for sharing and notes the interesting founds during coding time."
+              description:
+                "A fun front-end develop blog, hosted on my domain and build for sharing and notes the interesting founds during coding time.",
             },
             {
               name: "About Me",
@@ -68,7 +72,8 @@ export default {
               imgFileName: "640-who-am-i",
               imgAlt: "",
               responsible: "I was responsible for",
-              description: "A NPM + Vue.js single-page application (SPA). Programing with great RWD, amazing UX /UI and auto verification GitHub page deployment.",
+              description:
+                "A NPM + Vue.js single-page application (SPA). Programing with great RWD, amazing UX /UI and auto verification GitHub page deployment.",
             },
             {
               name: "Monster Slayer",
@@ -129,11 +134,14 @@ section {
   margin-top: 50px;
   padding: 50px;
 }
+h2 {
+  margin-bottom: 25px;
+}
 .see-more {
   text-decoration: none;
   color: var(--color-primary-darker);
-  float: right;
-  padding: 0 100px;
+  /* float: right; */
+  /* padding: 0 100px */
 }
 .see-more:hover {
   text-decoration: underline;
@@ -150,7 +158,7 @@ section {
   line-height: 1.5;
 }
 .my-work h3 {
-  /* margin-bottom: 25px; */
+  margin-bottom: 25px;
 }
 
 /* .my-work__card {
@@ -160,55 +168,83 @@ section {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.my-work__link {
-  width: calc((100% - (25px * 6)) / 3);
+.my-work__card {
+  width: calc((100% - (25px * 6) - (25px * 2)) / 3);
   padding: 25px;
   /* margin-right: 25px; */
   display: block;
   text-decoration: none;
   color: var(--color-block);
   border-radius: 10px;
-}
-.my-work__link:hover {
-  background: var(--color-gray-lightest);
-}
-.my-work__link img {
-  border-radius: 10px;
   box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
     0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 50%);
 }
+.my-work__card:not(:last-child) {
+  margin-right: 25px;
+}
+.my-work__card:hover {
+  background: var(--color-gray-lightest);
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 0%), 0px 1px 1px 0px rgb(0 0 0 / 0%),
+    0px 1px 3px 0px rgb(0 0 0 / 0%);
+}
+.my-work__card:hover img {
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+    0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 50%);
+}
+.my-work__card img {
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 0%), 0px 1px 1px 0px rgb(0 0 0 / 0%),
+    0px 1px 3px 0px rgb(0 0 0 / 0%);
+}
+.my-work__card p {
+  /* padding: 0 25px; */
+  text-align: left;
+}
 
-.my-work__link .my-work__card-header {
-  padding: 0px 25px;
+.my-work__card-header {
+  /* padding: 0px 25px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-i,
+i:not(:last-child),
 svg:not(:last-child) {
-  margin-right: 2px;
+  margin-right: 8px;
 }
-.my-work__link .my-work__card-header .fa-vuejs {
+i,
+svg {
+  font-size: 25px;
+}
+.my-work__card-header .fa-vuejs {
   color: #00a876;
 }
-.my-work__link .my-work__card-header .fa-codepen {
+.my-work__card-header .fa-codepen {
   color: var(--color-gray-darker);
 }
 
-.my-work__link p {
-  padding: 0 25px;
-}
 @media screen and (max-width: 1024px) {
-  .my-work__link {
-    width: calc((100% - (25px * 6)) / 2);
+  .my-work__card {
+    width: calc((100% - (25px * 6) - (25px * 2)) / 2);
+    margin-bottom: 25px;
   }
 }
 @media screen and (max-width: 768px) {
   .my-work__wrapper {
     justify-content: center;
   }
-  .my-work__link {
+  .my-work__card {
     width: 80%;
+  }
+  .my-work__card:not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .my-work__blobk {
+    padding: 0px;
+    margin: 0px;
   }
 }
 </style>

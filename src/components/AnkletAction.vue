@@ -5,16 +5,12 @@
         <h2>Don't wanna stop here?</h2>
       </div>
       <div>
-        <p>
-          Let's work togather, and have fun.Let's work togather, and have
-          fun.Let's work togather, and have fun.Let's work togather, and have
-          fun.
-        </p>
+        <p>Interested in work with me together?</p>
       </div>
       <div>
-        <a href="mailto:shuyukao0@gmail.com" class="is-rounded"
-          >Let's do this!</a
-        >
+        <a href="mailto:shuyukao0@gmail.com" class="is-rounded">
+          Let's do this!
+        </a>
       </div>
     </article>
   </section>
@@ -80,6 +76,11 @@ a:active {
 .is-rounded {
   border-radius: 290486px;
 }
+@media screen and (max-width: 1024px) {
+  .anklet-action__wrapper h2 {
+    line-height: 1.3;
+  }
+}
 @media screen and (max-width: 768px) {
   .anklet-action__wrapper {
     flex-direction: column;
@@ -87,6 +88,14 @@ a:active {
   }
   .anklet-action__wrapper div {
     width: 80%;
+    margin-bottom: 25px;
+  }.anklet-action__wrapper div:not(:last-child) {
+    margin-right: 0px;
+}
+}
+@media screen and (max-width: 500px) {
+  .anklet-action__wrapper {padding: 25px;
   }
+  h2{font-size:24px;}
 }
 </style>
