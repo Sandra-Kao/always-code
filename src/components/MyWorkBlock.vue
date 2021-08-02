@@ -1,9 +1,6 @@
 <template>
   <section class="my-work row-maxwidth-1200">
     <h2>My Work</h2>
-    <!-- <a href="mailto:shuyukao0@gmail.com" class="see-more"
-      >Want to see more? <i class="far fa-paper-plane"></i
-    ></a> -->
     <div
       class="my-work__blobk"
       v-for="type in workProjects"
@@ -11,17 +8,12 @@
     >
       <p>{{ type.project }}</p>
       <article class="my-work__wrapper">
-        <a href="mailto:shuyukao0@gmail.com" class="see-more"
-          >Want to see more? <i class="far fa-paper-plane"></i
-        ></a>
+        <a :href="type.seeMoreLink" class="see-more">
+          See more in {{ type.seeMoreName }} <i class="far fa-paper-plane" />
+        </a>
         <div class="my-work__group">
-          <a
-            class="my-work__link"
-            :href="work.link"
-            target="_blank"
-            v-for="work in type.works"
-            :key="work.name"
-          >
+          <a class="my-work__link" :href="work.link" target="_blank"
+            v-for="work in type.works" :key="work.name">
             <img :src="getImgUrl(work.imgFileName)" :alt="work.imgFileName" />
             <header class="my-work__card-header">
               <h3>{{ work.name }}</h3>
@@ -56,6 +48,8 @@ export default {
       workProjects: [
         {
           project: "Side Projects On My Own",
+          seeMoreName: "GitHub",
+          seeMoreLink: "https://github.com/Sandra-Kao",
           works: [
             {
               name: "About Me",
@@ -97,6 +91,8 @@ export default {
         },
         {
           project: "Work With Company",
+          seeMoreName: "Codepen",
+          seeMoreLink: "https://codepen.io/K-SY",
           works: [
             {
               name: "IoT Academy",
