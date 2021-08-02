@@ -100,6 +100,9 @@ export default {
 
   border-bottom: 2px solid var(--color-primary-base-15);
 }
+.specialty-block h2{
+  line-height: 1.3;
+}
 .container {
   background: var(--color-primary-light);
   padding-bottom: 25%;
