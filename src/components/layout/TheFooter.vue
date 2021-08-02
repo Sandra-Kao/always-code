@@ -32,7 +32,7 @@
         </span>
       </a>
 
-      <a class="button" href="tell:+886-933-374-988" target="_blank">
+      <a class="button" href="tel:+886-933-374-988" target="_blank">
         <span class="is-small absolute-center">
           <i class="fas fa-phone-volume absolute-center"></i>
         </span>
