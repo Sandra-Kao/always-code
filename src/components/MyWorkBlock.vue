@@ -66,7 +66,7 @@ export default {
                 "fab fa-github",
                 "fab fa-figma",
               ],
-              link: "/",
+              link: "/always-code/",
               imgFileName: "640-who-am-i",
               imgAlt: "",
               responsible: "I was responsible for",
