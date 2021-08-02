@@ -175,5 +175,9 @@ svg[class*="fa-"] {
   .specialty-wrapper {
     padding: 0;
   }
+  .specialty-wrapper__card {
+    width: 90%;
+    padding: 50px 0px;
+  }
 }
 </style>

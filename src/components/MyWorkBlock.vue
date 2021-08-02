@@ -32,7 +32,7 @@
             <p>{{ work.description }}</p>
           </a>
         </div>
-        <div class="my-work__card"></div>
+        <!-- <div class="my-work__card"></div> -->
       </article>
     </div>
   </section>
@@ -70,7 +70,8 @@ export default {
               imgFileName: "640-who-am-i",
               imgAlt: "",
               responsible: "I was responsible for",
-              description: "and implemented training programs to the company.",
+              description:
+                "A NPM + Vue.js single-page application (SPA). Programing with great RWD, amazing UX /UI and auto verification GitHub page deployment.",
             },
             {
               name: "Monster Slayer",
@@ -80,7 +81,7 @@ export default {
               imgAlt: "",
               responsible: "I was responsible for",
               description:
-                "I introduced and implemented training programs implemented training programs to the company.",
+                "Build this game to have fun and show schoolmate how a front-end program works after I graduated from my mother school. It was a great honor for me to invited and make a presentation at lecture hall.",
             },
             {
               name: "My Coding Blog",
@@ -90,7 +91,7 @@ export default {
               imgAlt: "",
               responsible: "I was responsible for",
               description:
-                "I introduced and implemented training programs to the company.",
+                "A fun front-end develop blog, hosted on my domain and build for sharing and notes the interesting founds during coding time.",
             },
           ],
         },
@@ -110,7 +111,7 @@ export default {
               imgAlt: "",
               responsible: "I was responsible for",
               description:
-                "I was responsible for. I introduced and implemented training programs to the company.",
+                "I own and develop Academy, a brand new front-end develop project with my team members, and I implement End-2-End test for Academy.",
             },
             {
               name: "Advantech CSR Portal",
@@ -125,7 +126,7 @@ export default {
               imgAlt: "",
               responsible: "I was responsible for",
               description:
-                "I was responsible for. I introduced and implemented training programs to the company.",
+                "It's a height-attention-driven project. I build CSR with .Net Core and Vanilla JavaScript in a short-limited time, and auto deployed on Web App in Azure CI/CD to enhance system stability.",
             },
             {
               name: "Marketplace",
@@ -141,7 +142,7 @@ export default {
               imgAlt: "",
               responsible: "I was responsible for",
               description:
-                "I was responsible for. I introduced and implemented training programs to the company.",
+                "This is a ASP.Net MVC Project. I was responsible for front-end data binding, page SEO, user experience and Azure CI/CD.",
             },
           ],
         },
@@ -156,6 +157,9 @@ export default {
 section {
   margin-top: 50px;
   padding: 50px;
+}
+h2 {
+  margin-bottom: 25px;
 }
 .see-more {
   text-decoration: none;
@@ -196,16 +200,23 @@ section {
   justify-content: space-between;
 }
 .my-work__link {
-  width: calc((100% - (25px * 6)) / 3);
+  width: calc((100% - (25px * 6) - (25px * 2)) / 3);
   padding: 25px;
   /* margin-right: 25px; */
   display: block;
   text-decoration: none;
   color: var(--color-block);
   border-radius: 10px;
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+    0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 50%);
+}
+.my-work__link:not(:last-child) {
+  margin-right: 25px;
 }
 .my-work__link:hover {
   background: var(--color-gray-lightest);
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 0%), 0px 1px 1px 0px rgb(0 0 0 / 0%),
+    0px 1px 3px 0px rgb(0 0 0 / 0%);
 }
 .my-work__link img {
   border-radius: 10px;
@@ -282,7 +293,8 @@ svg:not(:last-child) {
 }
 @media screen and (max-width: 1024px) {
   .my-work__link {
-    width: calc((100% - (25px * 6)) / 2);
+    width: calc((100% - (25px * 6) - (25px * 2)) / 2);
+    margin-bottom: 25px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -292,10 +304,14 @@ svg:not(:last-child) {
   .my-work__link {
     width: 80%;
   }
+  .my-work__link:not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 50px;
+  }
 }
 @media screen and (max-width: 500px) {
   section {
-    padding: 25px;
+    padding: 0px;
   }
   .my-work__blobk p:first-child {
     padding: 25px 5%;

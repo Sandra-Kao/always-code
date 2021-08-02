@@ -49,14 +49,11 @@ export default {
   --color-gray-darkest: #323233;
   --color-gray-darker: #606266;
   --color-gray-lightest: #f5f4f4;
-  /* --color-blue-lightest: #f7fbff;
-  --color-link-blue: #409eff;
-  --color-link-blue-lighter: #66b1ff;
-  --color-link-blue-darker: #3a8ee6; */
 
   --color-primary-light: #8fffda;
   --color-primary-base: #67e0b8;
-  --color-primary-darker: #359474;
+  --color-primary-darker: #18a497;
+  /* --color-primary-darker: #359474; */
   --color-primary-darkest: #033333;
   --color-primary-base-15: rgba(103, 224, 184, 0.15);
 }
@@ -143,5 +140,16 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2{font-size: 24px;}
+  h3{font-size: 16px;}
+  .container {
+    padding: 25px;
+    margin-bottom: 25px;
+  }
 }
 </style>
