@@ -110,7 +110,7 @@ export default {
                 "I own and develop Academy, a brand new front-end develop project with my team members, and I implement End-2-End test for Academy.",
             },
             {
-              name: "Advantech CSR Portal",
+              name: "Advantech CSR",
               iconSet: [
                 "fab fa-vuejs",
                 "fab fa-git-alt",
