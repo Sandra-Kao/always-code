@@ -80,7 +80,7 @@ export default {
             {
               name: "My Coding Blog",
               iconSet: ["fab fa-vuejs", "fab fa-css3-alt", "fas fa-heart"],
-              link: "https://alwayscode.live/views/Index.html",
+              link: "https://alwayscode.live/views/posts/VueJs/StyleGuide-Essential.html",
               imgFileName: "640-website-blog-post-vuejs",
               imgAlt: "",
               responsible: "I was responsible for",
