@@ -55,7 +55,6 @@ export default {
               name: "About Me",
               iconSet: [
                 "fab fa-vuejs",
-                "fab fa-node-js",
                 "fab fa-npm",
                 "fab fa-github",
                 "fab fa-figma",
